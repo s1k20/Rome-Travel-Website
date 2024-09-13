@@ -1,0 +1,223 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+.container3{
+    display:grid;
+    height:100vh;
+
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 80px 70px 300px 525px 525px 525px 525px 50px;
+
+    grid-template-areas:
+    "nav nav nav"
+    "sidebar sidebar sidebar"
+    "main main main"
+    "Bus Bus BusI"
+    "TramI Tram Tram"
+    "Metro Metro MetroI"
+    "TaxiI Taxi Taxi"
+    "footer footer footer";
+
+    grid-gap: 0.1rem;
+
+
+}
+
+nav{
+    grid-area: nav;
+    text-align: center;
+  
+}
+
+nav {
+    grid-area: nav;
+    background-image: url("Flag_of_Italy.svg");
+    background-size: cover;
+    background-position: center center;
+    height: 80px;
+  }
+  
+  nav h1 {
+    text-align: center;
+
+    font-size: 36px;
+    line-height: 180%;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+}
+#sidebar{
+    display: flex;
+    background-color: #B0B5B3;
+    grid-area: sidebar;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-between;
+  
+}
+
+#sidebar ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+   
+}
+    
+#sidebar li{
+    margin: 10px 0;
+}
+    
+#sidebar a{
+    display: flex;
+    color: #DBDBDB;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-family: "Roboto Slab",serif;
+}
+    
+#sidebar a:hover{
+    background-color: black;
+}
+
+main{
+    grid-area: main;
+    background-color: #706F6F;
+    text-align: center;
+    padding-top: 60px;
+    font-size: 50px;
+    font-family: header-font,arial,sans-serif;
+    color: #DBDBDB;
+}
+
+
+
+#bus{
+    background-color: #706F6F;
+    grid-area: Bus;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+}
+
+#bus h1{
+    color: white;
+    font-size: 40px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+#busI{
+    grid-area: BusI;
+    display: flex;
+    justify-content: center;
+}
+
+#tram{
+    background-color: lightgray;
+    grid-area: Tram;
+    text-align: center;
+    color: black;
+    font-size: 15px;
+}
+#tram h1{
+    color: black;
+    font-size: 40px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+
+#tramI{
+    grid-area: TramI;
+    background-color: #B0B5B3;
+    display: flex;
+    justify-content: center;
+}
+
+#metro{
+    background-color:#706F6F;
+    grid-area: Metro;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+}
+#metro h1{
+    color: white;
+    font-size: 40px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+
+#metroI{
+    grid-area: MetroI;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+}
+
+#taxi{
+    background-color: #B0B5B3;
+    grid-area: Taxi;
+    text-align: center;
+}
+
+#taxi h1{
+    color: black;
+    font-size: 40px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+#taxiI{
+    grid-area: TaxiI;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    grid-area: footer;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+  
+footer a{
+    color: #fff;
+    text-decoration: none;
+}
+  
+footer a:hover{
+    text-decoration: underline;
+}
+  
+footer p{
+    margin: 0;
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 500px) {
+    /* CSS rules for screens with a width of 500px or less */
+    .container3 {
+    grid-template-rows: 80px 70px 200px 375px 375px 375px 375px 50px;
+    }
+    
+    #sidebar {
+    font-size: 16px;
+    }
+    
+    main {
+    font-size: 40px;
+    }
+    
+    #bus h1, #tram h1, #metro h1, #taxi h1 {
+    font-size: 30px;
+    }
+    }
